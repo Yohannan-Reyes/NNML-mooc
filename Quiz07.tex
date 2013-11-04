@@ -1,12 +1,16 @@
-Question 1
+%----------------------------------------------------------------%
+\newpage
+\section*{Question 1}
 How many bits of information can be modeled by the hidden state (at some specific time) of a Hidden Markov Model with 16 hidden units?
-Your Answer		Score	Explanation
->16			
+%Your Answer		Score	Explanation
+16			
 16			
 2			
 4	Correct	1.00	
 Total		1.00 / 1.00	
-Question 2
+%----------------------------------------------------------------%
+\newpage
+\section*{Question 2}
 This question is about speech recognition. To accurately recognize what phoneme is being spoken at a particular time, one needs to know the sound data from 100ms before that time to 100ms after that time, i.e. a total of 200ms of sound data. Which of the following setups have access to enough sound data to recognize what phoneme was being spoken 100ms into the past?
 Your Answer		Score	Explanation
 A feed forward Neural Network with 200ms of input	Inorrect	0.00	A feed forward Neural Network can be used only in case it is given all the input it needs for the recognition task because it doesn't store the input history.
@@ -14,7 +18,9 @@ A Recurrent Neural Network (RNN) with 200ms of input	Correct	0.25
 A feed forward Neural Network with 30ms of input	Correct	0.25	A feed forward Neural Network can not be used given 30ms because we need 200ms to perform the recognition task.
 A Recurrent Neural Network (RNN) with 30ms of input	Inorrect	0.00	RNN can reliably memorize long term history due to its temporal connections between hidden states.
 Total		0.50 / 1.00	
-Question 3
+%----------------------------------------------------------------%
+\newpage
+\section*{Question 3}
 The figure below shows a Recurrent Neural Network (RNN) with one input unit x, one logistic hidden unit h, and one linear output unit y. The RNN is unrolled in time for T=0,1, and 2. 
 
 
@@ -24,10 +30,12 @@ If the input x takes the values 9,4,−2 at time steps 0,1,2 respectively, what 
 Answer for Question 3
 You entered:
 
-Your Answer		Score	Explanation
+%Your Answer		Score	Explanation
 3.23	Incorrect	0.00	
 Total		0.00 / 2.00	
-Question 4
+%----------------------------------------------------------------%
+\newpage
+\section*{Question 4}
 The figure below shows a Recurrent Neural Network (RNN) with one input unit x, one logistic hidden unit h, and one linear output unit y. The RNN is unrolled in time for T=0,1, and 2. 
 
 
@@ -51,7 +59,9 @@ We need to calculate ∂E∂z2. We can do this by backpropagation:
 
 
 The first equality holds because only the error at the last time step depends on z2.
-Question 5
+%----------------------------------------------------------------%
+\newpage
+\section*{Question 5}
 Consider a Recurrent Neural Network with one input unit, one logistic hidden unit, and one linear output unit. This RNN is for modeling sequences of length 4 only, and the output unit exists only at the last time step, i.e. T=3. This diagram shows the RNN unrolled in time:
 
 
@@ -66,11 +76,13 @@ For one specific training case, the input is 1 at T=0 and 0 at T=1, T=2, and T=3
 We're interested in the gradient for wxh, i.e. ∂E∂wxh. Because it's only at T=0 that the input is not zero, and it's only at T=3 that there's an output, the error needs to be backpropagated from T=3 to T=0, and that's the kind of situations where RNN's often get either vanishing gradients or exploding gradients. Which of those two occurs in this situation?
 
 You can either do the calculations, and find the answer that way, or you can find the answer with more thinking and less math, by thinking about the slope ∂y∂z of the logistic function, and what role that plays in the backpropagation process.
-Your Answer		Score	Explanation
+%Your Answer		Score	Explanation
 Vanishing gradient			
 Exploding gradient			
-Total		0.00 / 2.00	
-Question 6
+%Total		0.00 / 2.00	
+%----------------------------------------------------------------%
+\newpage
+\section*{Question 6}
 Consider the following Recurrent Neural Network (RNN): 
 
 As you can see, the RNN has two input units, two hidden units, and one output unit.
@@ -78,8 +90,8 @@ As you can see, the RNN has two input units, two hidden units, and one output un
 For this question, every arrow denotes the effect of a variable at time t on a variable at time t+1.
 
 Which feed forward Neural Network is equivalent to this network unrolled in time?
-Your Answer		Score	Explanation
+%Your Answer		Score	Explanation
 			
 			
 			
-Total		0.00 / 1.00
+% Total		0.00 / 1.00
