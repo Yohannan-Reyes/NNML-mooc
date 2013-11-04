@@ -1,5 +1,6 @@
 $----------------------------------------------------------------------------$
-Question 1
+\newpage
+\section*{Question 1}
 If the output of a model is given by y=f(x;W), then which of the following choices for f are most appropriate when the task is binary classification?
 Your Answer		Score	Explanation
 Linear threshold	Correct	0.50	
@@ -11,7 +12,8 @@ Question Explanation
 
 There can be more than one reasonable choice.
 $----------------------------------------------------------------------------$
-Question 2
+\newpage
+\section*{Question 2}
 After learning using the Perceptron algorithm, how easy is it to express the learned weight vector in terms of the input vectors and the initial weight vector? Assume the input vectors have real-valued components.
 Your Answer		Score	Explanation
 It requires real numbers.			
@@ -25,7 +27,8 @@ Question Explanation
 
 After running the perceptron algorithm and achieving zero errors, we will be able to express the final weight vector as the initial weight vector plus an integer combination of the inputs.
 $----------------------------------------------------------------------------$
-Question 3
+\newpage
+\section*{Question 3}
 Suppose we are given three data points: 
 x1,01,10,1→t→1→1→0 
 Furthermore, we are given the following weight vector (where the bias is set to 0): 
@@ -47,7 +50,8 @@ w(t)={w(t−1)+x^ if t^=1w(t−1)−x^ if t^=0
 
 In either case, the distance between w(t) and w(t−1) will be ||w(t−1)−w(t−1)±x^||2=||±x^||2=||x^||2≤2√ since this is the length of the largest input vector (in this case, (1,1)).
 $----------------------------------------------------------------------------$
-Question 4
+\newpage
+\section*{Question 4}
 Suppose that we have a perceptron with weight vector w and we create a new set of weights w∗=cw by scaling w by some positive constant c. Assume that the bias is zero. 
 
 True or false: if the perceptron now uses w∗ instead then it's classification decisions might change (that is, we have moved the classification boundary).
@@ -60,7 +64,8 @@ Question Explanation
 If the bias term is zero, all of the hyperplanes that represent individual cases go through the origin of weight space. 
 So changing the length of the weight vector without changing its direction cannot change which side of the plane it lies on.
 $----------------------------------------------------------------------------$
-Question 5
+\newpage
+\section*{Question 5}
 Suppose that we have a perceptron with weight vector w and we create a new set of weights w∗=w+c by adding some constant vector c to w. Assume that the bias is zero. 
 
 True or false: if the perceptron now uses w∗ instead then it's classification decisions might change (that is, we have moved the classification boundary).
@@ -72,7 +77,8 @@ Question Explanation
 
 Adding a constant vector can change the direction of the weight vector. This might change the side on which some data points lie.
 $----------------------------------------------------------------------------$
-Question 6
+\newpage
+\section*{Question 6}
 Suppose we are given four training cases: 
 x1,11,00,10,0→t→1→0→0→1 
 It is impossible for a binary threshold unit to produce the desired target outputs for all four cases. Now suppose that we add an extra input dimension so that each of the four input vectors consists of three numbers instead of two. 
@@ -84,7 +90,8 @@ Make the third value be 1 for one of the four input vectors and 0 for the other 
 Make the third value of each input vector be the opposite of the first value (i.e. use 1 if the first value is 0 and 0 if the first value is 1)	Incorrect	0.00	
 Total		0.00 / 2.00	
 $----------------------------------------------------------------------------$
-Question 7
+\newpage
+\section*{Question 7}
 Brian wants to use a neural network to predict the price of a stock tomorrow given today's price and the price over the last 10 days. The inputs to this network are price over the last 10 days and the output is tomorrow's price. The hidden units in this network receive information from the layer below, transmit information to the layer above and do not send information within the same layer. Is this an example of a feed-forward network or a recurrent network?
 Your Answer		Score	Explanation
 Feed-forward			
@@ -94,7 +101,8 @@ Question Explanation
 
 Even though Brian's network is modelling a sequence, it is doing this in an entirely feed-forward fashion. Another name for this kind of model is a nonlinear autoregressive process. Recurrent networks are much more powerful for this task and can do a much better job, however they are also more difficult to train.
 $----------------------------------------------------------------------------$
-Question 8
+\newpage
+\section*{Question 8}
 Brian and Andy are having an argument about the perceptron algorithm. They have a dataset that the perceptron cannot seem to classify (that is, it fails to converge to a solution). Andy reasons that if he could collect more examples, that might solve the problem by making the data set linearly separable and then the perceptron algorithm will converge. Brian claims that collecting more examples will not help. Which one of them is correct?
 Your Answer		Score	Explanation
 Brian			
