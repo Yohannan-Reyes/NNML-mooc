@@ -1,24 +1,6 @@
-Skip Navigation This page features MathJax technology to render mathematical formulae. If you are using a screen reader, please visit MathPlayer to download the plugin for your browser. Please note that this is an Internet Explorer-only plugin at this time. Neural Networks for Machine Learning
-Top Navigation BarCourses Kevin O'Brien 
- utoronto
-Neural Networks for Machine Learning 
-by Geoffrey Hinton
- Course Home Page Side Navigation Bar
-Home
-Student Survey
-Video Lectures
-Discussion Forums
-Quizzes
-Course Logistics
-Syllabus
-About Us
-Octave Installation
-Course Wiki 
-Join a Meetup 
- Help Articles
-Programming Assignment 4: Restricted Boltzmann Machines
 
-Warning: The hard deadline has passed. You can attempt it, but you will not get credit for it. You are welcome to try it as a learning exercise.
+Programming Assignment 4: Restricted Boltzmann Machines
+======================================================================
 
 This description was last modified on Wed Nov 14 11:54:00 UTC. I fixed the sample output for questions 6 and 7.
 
@@ -125,15 +107,15 @@ Added on November 14: This is the first time that we'll be using randomness, and
 
 Implement CD-1 in the file cd1.m. Vectorize it, i.e. don't use loops, and also otherwise, make sure that the calls to sample_bernoulli exactly match the ones that you see below about 1 case and 10 cases. 
 
-describe_matrix(cd1(test_rbm_w, data_1_case)) gave me this:
-sample_bernoulli() was called with a matrix of size 100 by 1. sample_bernoulli() was called with a matrix of size 256 by 1. sample_bernoulli() was called with a matrix of size 100 by 1. Describing a matrix of size 100 by 256. The mean of the elements is -0.160742. The sum of the elements is -4115.000000
-describe_matrix(cd1(test_rbm_w, data_10_cases)) gave me this:
+- describe_matrix(cd1(test_rbm_w, data_1_case)) gave me this:
+- sample_bernoulli() was called with a matrix of size 100 by 1. sample_bernoulli() was called with a matrix of size 256 by 1. sample_bernoulli() was called with a matrix of size 100 by 1. Describing a matrix of size 100 by 256. The mean of the elements is -0.160742. The sum of the elements is -4115.000000
+- describe_matrix(cd1(test_rbm_w, data_10_cases)) gave me this:
 sample_bernoulli() was called with a matrix of size 100 by 10. sample_bernoulli() was called with a matrix of size 256 by 10. sample_bernoulli() was called with a matrix of size 100 by 10. Describing a matrix of size 100 by 256. The mean of the elements is -0.185137. The sum of the elements is -4739.500000
 Run describe_matrix(cd1(test_rbm_w, data_37_cases)), and report the sum, with at least two digits after the decimal point.
-Answer for Question 6
 
-Question 7
-%-------------------------------------------------------------------------------%
+<!------------------------------------------------------------------------------->
+### Question 7
+
 Improving CD-1
 If you go through the math (either on your own on with your fellow students on the forum), you'll see that sampling the hidden state that results from the "reconstruction" visible state is useless: it does not change the expected value of the gradient estimate that CD-1 produces; it only increases its variance. More variance means that we have to use a smaller learning rate, and that means that it'll learn more slowly; in other words, we don't want more variance, especially if it doesn't give us anything pleasant to compensate for that slower learning. 
 
@@ -145,9 +127,8 @@ Running describe_matrix(cd1(test_rbm_w, data_10_cases)) gives me this:
 sample_bernoulli() was called with a matrix of size 100 by 10. sample_bernoulli() was called with a matrix of size 256 by 10. Describing a matrix of size 100 by 256. The mean of the elements is -0.185591. The sum of the elements is -4751.142054
 Please run describe_matrix(cd1(test_rbm_w, data_37_cases)) and report the sum, with at least 2 digits after the decimal point.
 Answer for Question 7
-%-------------------------------------------------------------------------------%
-\newpage
-\section*{Question 8}
+<!------------------------------------------------------------------------------->
+### Question 8
 
 Training an RBM on real-valued pixel intensities
 We want to train our RBM on the handwritten digit data that we used in PA3, but that presents a problem: that data is not binary (it's pixel intensities between 0 and 1), but our RBM is designed for binary data. 
@@ -172,15 +153,12 @@ An initial run a4_main(300, .02, .005, 1000) should give you an interesting disp
 
 Keep the number of hidden units at 300, the learning rate for the RBM at 0.02, and the number of iterations at 1000. Explore what learning rate for the hidden-to-class weights works best, where "best" means best for the validation data classification cross-entropy loss. Report that learning rate. If your answer is more than 0.5 times what I found with a very extensive search, and less than 2 times what I found, then it will be considered correct for this question.
 Answer for Question 8
-%-------------------------------------------------------------------------------%
-\newpage
-\section*{Question 9}
+<!------------------------------------------------------------------------------->
+### Question 9
 For the settings that you chose in the previous question, report the test set classification error rate, with at least four digits after the decimal point. (Not for the assignment, but simply as an observation: is it better or worse than what you got on PA3?)
-Answer for Question 9
-%-------------------------------------------------------------------------------%
 
-\newpage
-\section*{Question 10}
+<!------------------------------------------------------------------------------->
+### Question 10
 
 Going further
 Of course, you can do much more. For example, explore what number of hidden units works best, and you'll see that that number is indeed much larger than it was on PA3. Or use your PA3 code to properly train the feedforward NN after its RBM initialization. Or add some more hidden layers. Or... creatively combine everything else that you're learning in this course, to see how much this RBM-based unsupervised pre-training can do.
