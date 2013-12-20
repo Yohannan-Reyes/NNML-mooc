@@ -1,4 +1,4 @@
-NeuralNetsML
+NNML Mooc
 ============
 
-Neural Networks for Machine Learning (Coursera)
+NNML Mooc
